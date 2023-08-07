@@ -20,6 +20,7 @@ const Feed = () => {
   const [searchText, setSearchText] = useState("");
   const [posts, setPost] = useState([]);
   const handleSearchChange = (e) => {};
+
   useEffect(() => {
     const fetchPosts = async () => {
       const response = await fetch("/api/prompt");
@@ -28,6 +29,7 @@ const Feed = () => {
     };
     fetchPosts();
   }, []);
+
   return (
     <section className="feed">
       <form className="relative w-full flex-center">
